@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="row d-flex">
+        <div *ngFor="let photo of video"
+             class="col-sm-12 col-md-6 col-lg-4 col-xl-3 mt-5">
+          <div class="card h-100 ">
+            <img [src]="photo.Photo" class="card-img-top" alt="..." height="250px">
+              <div class="card-body">
+                <h5 class="card-title">{{photo.vName}}</h5>
+                <p class="card-text">Dummy text herer .</p>
+                <a class="btn btn-primary" (click)="LikeCounter(photo)">Like</a>
+                  {{photo.Like}} &nbsp;
+                  <a (click)="DislikeCounter(photo)" class="btn btn-danger">Dislike</a>
+                    {{photo.Dislike}}
+              </div>
+          </div>
+        </div>
+    </div>
+</div>
+
+
